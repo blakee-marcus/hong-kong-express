@@ -3,11 +3,15 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Clock, MapPin, Phone, ScrollText } from 'lucide-react';
 
+import Hero from '../assets/your-hero-image.jpg'; // Replace with your actual image path
+
 function Home() {
   return (
     <div className='min-h-screen bg-offwhite text-secondary font-body flex flex-col items-center justify-center'>
       {/* Hero Section */}
-      <section className='relative w-full bg-[url("/your-hero-image.jpg")] bg-cover bg-center text-white py-24 px-6 shadow-inner'>
+      <section
+        className='relative w-full  bg-cover bg-center text-white py-24 px-6 shadow-inner'
+        style={{ backgroundImage: `url(${Hero})` }}>
         <div className='absolute inset-0 bg-gradient-to-br from-black/60 to-primary/80 z-0' />
         <div className='relative z-10 text-center max-w-2xl mx-auto'>
           <motion.h1
